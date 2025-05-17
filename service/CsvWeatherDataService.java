@@ -25,14 +25,14 @@ public class CsvWeatherDataService implements WeatherDataService {
 
             while ((line = br.readLine()) != null) {
                 if (!headerSkipped) {
-                    headerSkipped = true; // Skip the header
+                    headerSkipped = true; 
                     continue;
                 }
 
                 String[] parts = line.split(",");
                 if (parts.length < 6) continue;
 
-                // Remove BOM if present (fixes "Ä°zmir" to "İzmir")
+                // Im fixing "Ä°zmir" to "İzmir"
                 String cityName = parts[0].trim().replace("\uFEFF", "");
                 LocalDate date = LocalDate.parse(parts[1].trim(), DATE_FORMAT);
                 double temp = Double.parseDouble(parts[2].trim());

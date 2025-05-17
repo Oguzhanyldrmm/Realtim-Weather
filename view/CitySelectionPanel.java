@@ -16,7 +16,7 @@ public class CitySelectionPanel extends JPanel {
         cityComboBox = new JComboBox<>();
         cityComboBox.setEditable(false);
 
-        // Tarih seçici
+        
         SpinnerDateModel dateModel = new SpinnerDateModel();
         dateSpinner = new JSpinner(dateModel);
         dateSpinner.setEditor(new JSpinner.DateEditor(dateSpinner, "yyyy-MM-dd"));

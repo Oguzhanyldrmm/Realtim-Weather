@@ -36,7 +36,7 @@ public class StatisticsCalculator {
                 Comparator.comparingDouble(Double::doubleValue), true, "wind");
     }
 
-    // Yardımcı metod: Ortalamalara göre karşılaştırma
+    
     private static String getCityWithExtremeAverage(List<CityWeatherData> data,
                                                     Comparator<Double> comparator,
                                                     boolean max,

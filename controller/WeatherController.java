@@ -23,16 +23,15 @@ public class WeatherController {
     public WeatherController(WeatherDataset dataset, MainFrame mainFrame) {
         this.dataset = dataset;
         this.mainFrame = mainFrame;
-        this.temperatureUnit = new Celsius(); // default
+        this.temperatureUnit = new Celsius(); 
 
         init();
     }
 
     private void init() {
-        // 1. Şehirleri GUI'ye yükle
         loadCitiesToComboBox();
 
-        // 2. Buton tıklanınca işlem yap
+
         mainFrame.getCitySelectionPanel().getShowButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,14 +39,12 @@ public class WeatherController {
             }
         });
 
-        // 3. Sıcaklık birimi seçimi değiştiğinde güncelle
-        // (Gelişmiş versiyonda Observer ile yapılabilir)
         Timer timer = new Timer(500, e -> updateTemperatureUnit());
         timer.start();
 
-        // 4. Başlangıçta istatistikleri göster
+        
         showStatistics();
-        showTrackedCities(); // tracked cities'i göster
+        showTrackedCities(); 
 
     }
 

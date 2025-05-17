@@ -14,31 +14,31 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         super("Realtime Weather 🌤");
 
-        // Bileşenleri oluştur
+   
         citySelectionPanel = new CitySelectionPanel();
         weatherDisplayPanel = new WeatherDisplayPanel();
         statisticsPanel = new StatisticsPanel();
         unitSelectorPanel = new UnitSelectorPanel();
-        trackedCitiesPanel = new TrackedCitiesPanel(); // Oluştur
+        trackedCitiesPanel = new TrackedCitiesPanel(); 
 
-        // Yerleşim düzeni
+        
         setLayout(new BorderLayout());
 
-        // Panel yerleşimi
+        
         add(unitSelectorPanel, BorderLayout.NORTH);
         add(citySelectionPanel, BorderLayout.WEST);
         add(weatherDisplayPanel, BorderLayout.CENTER);
         add(statisticsPanel, BorderLayout.SOUTH);
-        add(trackedCitiesPanel, BorderLayout.EAST);   // GUI’ye ekle
+        add(trackedCitiesPanel, BorderLayout.EAST);   
 
-        // Pencere ayarları
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(900, 600);
-        setLocationRelativeTo(null); // Ortala
+        setLocationRelativeTo(null); 
         setVisible(true);
     }
 
-    // Getter metodları controller ile iletişim için
+    
     public CitySelectionPanel getCitySelectionPanel() {
         return citySelectionPanel;
     }
